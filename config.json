@@ -1,0 +1,40 @@
+{
+	"Server": {
+		"address": ":53"
+	},
+	"rest": {
+		"address": ":8080"
+	},
+	"ruledir": "rules",
+	"rules": [
+		{
+			"type": "string",
+			"format": "hostlist",
+			"sources": [
+				"127.0.0.1 localhost",
+				"0.0.0.0 0.0.0.0"
+			]
+		},
+		{
+			"type": "file",
+			"format": "hostlist",
+			"sources": [
+				"stevenblack_hosts.txt",
+				"cameleon_hosts.txt",
+				"hosts_filead_servers_hosts.txt"
+			]
+		},
+		{
+			"type": "file",
+			"format": "blacklist",
+			"sources": [
+				"blacklist.txt",
+
+				"malwaredomains.txt",
+				"disconnectme_ad.txt",
+				"disconnectme_tracking.txt",
+				"zeustracker.txt"
+			]
+		}
+	]
+}
